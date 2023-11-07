@@ -17,6 +17,7 @@
         transform: translate(-50%,-50%);
         color: white;
     }
+    
 </style>
 
 <nav class="navbar navbar-expand-lg">
@@ -37,7 +38,7 @@
             <a class="nav-link" href="#">Sign In</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Add Product</a>
+            <a class="nav-link" href="{{route('add')}}">Add Product</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Add Categories</a>
