@@ -25,4 +25,12 @@ class productController extends Controller
 
 
     }
+    //get the products
+    public function getProducts(){
+        //get the data from the products table 
+        $products=Product::all();
+        // after getting the data, return to the welcome page
+        return view('welcome',compact('products'));
+        
+}
 }
