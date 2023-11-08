@@ -23,3 +23,5 @@ Route::view('/', 'welcome');
 Route::view('/add-product', 'pages.admin.add-product')->name('add');
 Route::post('/insert-product',[productController::class,'insertProduct']);
 Route::get('/',[productController::class,'getProducts']);
+Route::view('/single/{id}','pages.user.single-product');
+Route::get('/single/{id}',[productController::class,'findProduct']);

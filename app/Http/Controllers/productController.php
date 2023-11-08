@@ -28,9 +28,14 @@ class productController extends Controller
     //get the products
     public function getProducts(){
         //get the data from the products table 
-        $products=Product::all();
+        $products = Product::paginate(8);
         // after getting the data, return to the welcome page
         return view('welcome',compact('products'));
         
+    }
+
+    public function findProduct($id){
+        $item = Product::find($id);
+        return view('pages.user.single-product',compact('item'));
 }
 }
